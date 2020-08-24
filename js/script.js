@@ -39,6 +39,7 @@ function start(params) {
     numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
   }
 }
+start();
 
 function NumberFilms(params) {
   if (personalMovieDB.count < 10) {
