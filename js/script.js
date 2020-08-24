@@ -11,6 +11,14 @@ let personalMovieDB = {
   privat: false
 };
 
+function start(params) {
+  numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+  while (numberOfFilms == '' || numberOfFilms == null || numberOfFilms == isNaN) {
+    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+  }
+}
+start();
+
 function showMyDB() {
   if (personalMovieDB.privat == false) {
     console.log(personalMovieDB);
@@ -33,13 +41,7 @@ for (let i = 0; i < 2; i++) {
   personalMovieDB.movies[a] = b;
 }
 
-function start(params) {
-  numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-  while (numberOfFilms == '' || numberOfFilms == null || numberOfFilms == isNaN) {
-    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-  }
-}
-start();
+
 
 function NumberFilms(params) {
   if (personalMovieDB.count < 10) {
